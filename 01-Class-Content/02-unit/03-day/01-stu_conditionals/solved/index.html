@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conditionals Activity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <script>
+        const classList = ['Math', 'Science', 'English', 'Music', 'Intro to Programming', 'Basketweaving'];
+        
+        // Remember to open up chrome dev tools to see your class list!
+        console.log(classList);
+
+        const replaceClass = prompt('Please select which class you would like to replace (case sensitive!):'); 
+        const newClass = prompt('Please enter the name of a new class:');
+        
+        for ( let i = 0; i < classList.length; i++ ) {
+            if (classList[i] === replaceClass) {
+                classList[i] = newClass;
+            }
+        }
+
+        // Challenge
+        if (classList.includes(replaceClass)) {
+            const newIndex = classList.indexOf(replaceClass);
+            classList[newIndex] = newClass;
+        }
+
+        console.log(`This is your new class list: ${classList}`);
+    </script>
+</body>
+</html>

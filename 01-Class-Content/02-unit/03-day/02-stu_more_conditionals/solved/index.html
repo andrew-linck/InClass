@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mastering Conditionals</title>
+</head>
+
+<body>
+  <script>
+    const user = prompt('What\'s your username?');
+    const password = prompt('What\'s your password?');
+    
+    if (user === 'admin' && password === '1234') {
+      alert('Welcome to the admin page');
+    } else if (user === 'average joe' && password === 'js rocks') {
+      alert('Welcome to the user landing page');
+    } else {
+      alert('Invalid username and password. Refresh the page to retry');
+    }
+  </script>
+</body>
+
+</html>

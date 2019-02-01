@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Stock Symbol Prices</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Stock Search</h1>
+
+      <!-- We'll be dumping our JSON contents in here -->
+      <div id="stock-view"></div>
+
+      <!-- This form will be where users input data about the stocks -->
+      <form id="stock-form">
+        <label for="stock-input">Search for a stock</label>
+        <input type="text" id="stock-input"><br>
+
+        <!-- This button will trigger our AJAX call -->
+        <input id="find-stock" type="submit" value="stock Search">
+      </form>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="app.js"></script>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conditional Alerts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <script>
+        // Grab a user input using a `Prompt` and store it in a variable. 
+        // Add a conditional statment where if the variable's length is greater than `4`, we alert the user that their name is greater than four characters. 
+        //Otherwise, alert that their name is less than four characters.
+        const newName = prompt('Enter a name:');
+
+        if (newName.length > 4) {
+            alert('That name is greater than 4 characters!');
+        } else {
+            alert('That name is less than 4 characters!');
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Demo</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+    
+  const stockSymbol = 'aapl';
+  const queryURL = `https://api.iextrading.com/1.0/stock/${stockSymbol}/quote`;
+
+  $.ajax({
+    url: queryURL,
+    method: 'GET'
+  }).then(function(response) {
+    console.log(response);
+  });
+
+  $.ajax({
+    url: `https://api.iextrading.com/1.0/stock/goog/quote`,
+    method: 'GET'
+  }).then(function(response) {
+    console.log(response);
+  });
+
+  $.ajax({
+    url: `https://api.iextrading.com/1.0/stock/tsla/quote`,
+    method: 'GET'
+  }).then(function(response) {
+    console.log(response);
+  });
+
+  $.ajax({
+    url: `https://api.iextrading.com/1.0/stock/msft/quote`,
+    method: 'GET'
+  }).then(function(response) {
+    console.log(response);
+  });
+
+  // -------------------------------------------------------
+
+  console.log(`In the console, this line will be first; however, this line is last in the code`);
+</script>
+    
+</body>
+</html>

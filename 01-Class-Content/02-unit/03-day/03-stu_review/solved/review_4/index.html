@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Looping Through Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <script>
+        
+        const stuList = ['George', 'Lisa', 'Glenna'];
+
+        for (let i = 0; i < 3; i++) {
+            const newName = prompt('Please enter a new name:');
+            stuList.push(newName);
+        }
+
+        for (let i = 0; i < stuList.length; i++) {
+            console.log(stuList[i]);
+        }
+
+    </script>
+    
+</body>
+</html>

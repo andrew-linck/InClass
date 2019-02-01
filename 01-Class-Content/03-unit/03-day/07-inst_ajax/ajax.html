@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Demo</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+    
+  const stockSymbol = 'aapl';
+  const queryURL = `https://api.iextrading.com/1.0/stock/${stockSymbol}/quote`;
+
+  $.ajax({
+    url: queryURL,
+    method: 'GET'
+  }).then(function(response) {
+    console.log(response);
+    console.log(response.companyName);
+  });
+  // -------------------------------------------------------
+
+  console.log(`This console.log will probably happen first because of asynchronicity.`);
+
+  const x = 2;
+  const y = 10;
+  const z = 15;
+  console.log(`We can also assign some variables and do some arithmetic while we wait too: ${x} + ${y} + ${z} = ${x + y + z}`);
+
+</script>
+    
+</body>
+</html>
