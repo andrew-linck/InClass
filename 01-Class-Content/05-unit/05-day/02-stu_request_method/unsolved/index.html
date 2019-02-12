@@ -21,4 +21,13 @@
    </div>
  </div>
 </body>
+<script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous">
+  $.ajax({
+  url: "http://localhost:8080/",
+  context: document.body
+}).done(function(response) {
+  $( this ).addClass( "done" );
+  $('.done').html(response)
+});
+</script>
 </html>

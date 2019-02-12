@@ -12,7 +12,8 @@ app.use(express.json());
 const PORT = 8080;
 
 app.use(function(req, res) {
-  console.log(req.method);
+  console.log("Method", req.method);
+  console.log("URL", req.url);
   res.end();
 });
 

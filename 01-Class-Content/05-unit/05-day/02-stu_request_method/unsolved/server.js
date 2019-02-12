@@ -13,15 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, './index.html'));
+  res.json(req.body)
 });
-
-// TODO: Add a POST request on the '/' route
-//==========================================
-
-//CODE GOES HERE
-
-//==========================================
 
 // Starts our server.
 app.listen(PORT, function() {

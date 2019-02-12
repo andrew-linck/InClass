@@ -21,34 +21,30 @@ const chuck = {
   yearsInOffice: 27
 };
 
-// Create one more data entry for an employee named "Raj".
-// Enter any values you like for the parameters following the same format as the Katherine and Chuck object
+const raj = {
+  name: 'Raj Mannty',
+  role: 'Front Desk',
+  officeExtension: 5,
+  yearsInOffice: 30
+};
 
-// YOUR CODE GOES HERE
-
-//
-
-// Routes
-// ===========================================================
 app.get('/', function(req, res) {
-  res.send('Welcome to the Company Directory!');
+  res.send([raj, chuck, katherine]);
 });
 
-app.get('/katherine', function(req, res) {
-  res.json(katherine);
-});
-
-app.get('/chuck', function(req, res) {
-  res.json(chuck);
-});
-
-// Create a new Express route that leads users to the new Raj data
-// Follow the same format as the Katherine and Chuck routes
-//
-
-// YOUR CODE GOES HERE
-//
-//
+app.get('/:name', function(req, res) {
+  if (req.params.name == 'raj') {
+    res.json(raj)
+  }
+  if (req.params.name == 'katherine') {
+    res.json(katherine)
+  }
+  if (req.params.name == 'chuck') {
+    res.json(katherine)
+  } else {
+    res.json(`noone named ${req.params.name}`)
+  }
+})
 
 // Listener
 // ===========================================================
