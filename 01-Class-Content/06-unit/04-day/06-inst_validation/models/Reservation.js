@@ -15,5 +15,6 @@ module.exports = function(connection, Sequelize) {
     }
   });
 
-  return Reservation;
+  return Reservation; // author article name and email 
+  // article title and body
 }

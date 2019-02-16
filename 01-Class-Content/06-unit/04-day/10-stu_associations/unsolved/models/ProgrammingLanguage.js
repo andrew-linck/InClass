@@ -18,6 +18,9 @@ module.exports = function(connection, Sequelize) {
 
   // Add an association to our CodeProjects model
   // ADD CODE HERE
+  ProgrammingLanguage.associate = function(models) {
+    ProgrammingLanguage.hasMany(models.codeproject);
+  };
 
   return ProgrammingLanguage;
 }

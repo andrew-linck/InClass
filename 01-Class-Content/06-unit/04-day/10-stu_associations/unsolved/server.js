@@ -10,5 +10,10 @@ db.sequelize.sync().then(function() {
   // Use sequelize to find all programming languages in our database
   // Include the associated code projects
   // ADD CODE HERE
+  db.ProgrammingLanguage.findall({
+    include: [db.codeproject]
+  }).then(function(data) {
+    console.log(data);
+  })
   
 });

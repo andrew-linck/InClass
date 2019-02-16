@@ -45,4 +45,25 @@ module.exports = function(app) {
         res.json({ error: error });
       });
   });
+
+  app.put('/api/reservations/:id', function(req, res) {
+    db.Reservation.update(
+      req.body,
+      { where: { id: req.params.id } }
+    ).then(function() {
+      res.json({ success: true });
+    }).catch(function(error) {
+      res.json({ error: error });
+    });
+  });
+
+  app.delete('/api/reservations/:id', function(req, res) {
+    db.Reservation.destroy({ 
+      where: { id: req.params.id } 
+    }).then(function() {
+      res.json({ success: true });
+    }).catch(function(error) {
+      res.json({ error: error });
+    });  
+  });
 }

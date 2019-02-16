@@ -39,8 +39,22 @@ module.exports = function(app) {
 
   // GET Request
   // Responds with just the requested table at the referenced id
-  app.get('/api/reservations/:id', function(req, res) {
+  app.get('/api/reservations/:id(\d+)', function(req, res) {
     db.Reservation.find({ where: { id: req.params.id }})
+      .then(function(data){
+        res.json(data);
+      }).catch(function(error) {
+        res.json({ error: error });
+      });
+  });
+  app.get('/api/reservations/:name)', function(req, res) {
+    db.Reservation.findOne(
+      { 
+        where: {
+          name: req.params.name
+        }
+      }
+      )
       .then(function(data){
         res.json(data);
       }).catch(function(error) {
