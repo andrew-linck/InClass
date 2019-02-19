@@ -1,6 +1,6 @@
 {
   "username": "root",
-  "password": "funfunfun",
+  "password": "root",
   "database": "restaurant_db",
   "configurations" : {
     "host": "127.0.0.1",

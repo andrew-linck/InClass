@@ -7,7 +7,7 @@ module.exports = function(connection, Sequelize) {
     age: Sequelize.INTEGER,
     hireDate: {
       type:Sequelize.DATE,
-      default: '1970-01-01'
+      defaultValue: '1970-01-01'
     }
   });
 

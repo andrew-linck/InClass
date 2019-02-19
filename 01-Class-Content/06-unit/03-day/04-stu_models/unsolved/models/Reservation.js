@@ -5,5 +5,5 @@ module.exports = function(connection, Sequelize) {
     email: Sequelize.STRING
   });
 
-    return Reservation;
+  return Reservation;
 }

@@ -8,7 +8,7 @@ The Sequelize model and most of the Express functionality has been provided for 
 
 In `routes/api-routes.js`, create a new route that processes a POST request. 
 
-Using Sequelize, the server should retrieve all data stored in the `Tables` table when it receives the GET request, and should create a new entry in the database when it receives a POST request.
+Using Sequelize, the server should retrieve all data stored in the `Reservations` table when it receives the GET request, and should create a new entry in the database when it receives a POST request.
 
 Once you have the routes written, run `server.js` and use Postman to test your routes.
 

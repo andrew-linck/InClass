@@ -21,22 +21,4 @@ module.exports = function(app) {
     });
   });
 
-  app.post('/api/reservations', function(req, res) {
-    db.Reservation.create(req.body).then(function(rows) {
-      res.json(rows)
-    }).catch(function(error) {
-      res.json({ error: error });
-    });
-  });
-
-  app.get('/api/reservations/:id', function(req, res) {
-    db.Reservation.find({
-      where: {id: req.params.id}
-    }).then(function(rows) {
-      res.json(rows)
-    }).catch(function(error) {
-      res.json({ error: error });
-    });
-  });
-
 }

@@ -19,6 +19,15 @@ getArticles();
 
 const postArticle = function(event){
   event.preventDefault();
+  const article = {
+    title: $('#article-title').val(),
+    body: $('#article-body').val()
+  };
+  console.log(article);
+  $.post('/api/articles', article).then(function(dbArticles){
+    console.log(dbArticles);
+    getArticles();
+  });
   // add your post request here 
   // don't forget to call getArticles after to re-render your articles to the page
 }
